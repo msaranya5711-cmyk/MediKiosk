@@ -478,7 +478,7 @@ const AYUSH_STEP = {
    holds an API key — all of that lives server-side. Point this at
    your deployed backend (see the accompanying /backend folder).
 ----------------------------------------------------------------*/
-const API_BASE_URL = "http://localhost:4000/api";
+const API_BASE_URL = "https://medikiosk-backend-b592.onrender.com/api";
 
 /* ---------------------------------------------------------------
    PHARMACY API
