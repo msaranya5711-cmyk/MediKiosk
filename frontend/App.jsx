@@ -702,7 +702,7 @@ function useSecureMessaging({ token, role, enabled }) {
         setConnected(true);
        ws.send(JSON.stringify({
   type: "register_key",
-  userId: role === "doctor" ? `doctor-${Date.now()}` : `patient-${Date.now()}`,
+userId: role === "staff" ? `doctor-${Date.now()}` : `patient-${Date.now()}`
   publicKeyJwk: keyPairRef.current.publicKeyJwk
 }));
         if (role === "patient") ws.send(JSON.stringify({ type: "request_doctor_list" }));
