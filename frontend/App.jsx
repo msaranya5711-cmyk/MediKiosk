@@ -2381,7 +2381,7 @@ function saveLocalMedicationEntry(patientToken, date, taken) {
 
 function MedicationTracker({ patientToken, onOrderMedicine }) {
   const [entries, setEntries] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
   const [offline, setOffline] = useState(false);
