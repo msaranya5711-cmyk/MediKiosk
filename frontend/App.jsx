@@ -525,8 +525,8 @@ function extractOrderList(data) {
 function extractOrder(data) {
   return data?.order || data?.data || data;
 }
-const WS_BASE_URL = "ws://localhost:4000/ws/messaging"; // use wss:// in production
-
+ // use wss:// in production
+const WS_BASE_URL = "wss://medikiosk-backend-b592.onrender.com/ws/messaging";
 // Get this from Google Cloud Console → APIs & Services → Credentials
 // (OAuth Client ID, type "Web application"). Must match GOOGLE_CLIENT_ID
 // in the backend's .env.
