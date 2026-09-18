@@ -4677,11 +4677,11 @@ export default function App() {
           />
         )}
 
-        {screen === "medication" && patientToken && (
+       {screen === "medication" && (
           <MedicationTracker key="medication" patientToken={patientToken} onOrderMedicine={() => handleNavigate("pharmacy")} />
         )}
 
-        {screen === "doctors" && patientToken && (
+        {screen === "doctors" && (
           <DoctorsScreen key="doctors" messaging={patientMessaging} suggestedSpecialty={suggestedSpecialty} />
         )}
 
