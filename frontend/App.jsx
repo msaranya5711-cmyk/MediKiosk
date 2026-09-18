@@ -700,7 +700,11 @@ function useSecureMessaging({ token, role, enabled }) {
       ws.onopen = () => {
         if (closed) return;
         setConnected(true);
-        ws.send(JSON.stringify({ type: "register_key", publicKeyJwk: keyPairRef.current.publicKeyJwk }));
+       ws.send(JSON.stringify({
+  type: "register_key",
+  userId: role === "doctor" ? `doctor-${Date.now()}` : `patient-${Date.now()}`,
+  publicKeyJwk: keyPairRef.current.publicKeyJwk
+}));
         if (role === "patient") ws.send(JSON.stringify({ type: "request_doctor_list" }));
       };
 
